@@ -1,0 +1,52 @@
+@import "vars";
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $black;
+    &::-webkit-scrollbar {
+        z-index: 10;
+        width: 11px;
+        height: 0;
+        background: rgba($white, 0.5);
+        mix-blend-mode: normal;
+    }
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        background-color: rgba($primary, 0.5);
+    }
+}
+
+.body.active {
+    overflow: hidden;
+}
